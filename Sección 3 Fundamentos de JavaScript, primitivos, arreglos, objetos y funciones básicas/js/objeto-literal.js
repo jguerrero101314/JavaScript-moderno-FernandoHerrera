@@ -11,7 +11,8 @@ let personaje = {
     direccion: {
         zip: '10880, 90265',
         ubicacion: 'Malibu, California'
-    }
+    },
+    ' ultima-Pelicula': 'Infinity war'
 };
 console.log('Nombre:', personaje.nombre);
 console.log('Nombre:', personaje['nombre']);
@@ -20,3 +21,8 @@ console.log('Coors:', personaje.coords.lat);
 
 
 console.log('No. Trajes:', personaje.trajes.length);
+console.log('Ultimo Traje:', personaje.trajes[personaje.trajes.length - 1]);
+
+const x = 'vivo';
+console.log('Vivo', personaje[x]);
+console.log('Ultima pelicula', personaje[" ultima-Pelicula"]);
