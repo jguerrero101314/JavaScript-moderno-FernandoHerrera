@@ -36,7 +36,7 @@ const pedirCarta = () => {
     console.log(deck);
     console.log(carta); //carta debe ser de la baraja
 
-    return '2C';
+    return carta;
 }
 pedirCarta();
 
@@ -47,5 +47,5 @@ const valorCarta = (carta) => {
         (valor === 'A') ? 11 : 10 :
         valor * 1;
 }
-const valor = valorCarta('KD');
+const valor = valorCarta(pedirCarta());
 console.log({ valor });
