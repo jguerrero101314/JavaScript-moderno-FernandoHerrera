@@ -8,7 +8,7 @@ let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
 const esepciales = ['A', 'J', 'Q', 'K'];
 
-
+//esta funcion crea una nueva baraja
 const crearDeck = () => {
     for (let i = 2; i <= 10; i++) {
         for (let tipo of tipos) {
@@ -26,3 +26,16 @@ const crearDeck = () => {
     return deck;
 }
 crearDeck();
+
+//esta funcion me permite tomar una carta
+const pedirCarta = () => {
+    if (deck.length === 0) {
+        throw 'No hay cartas en el deck';
+    }
+    const carta = deck.pop();
+    console.log(deck);
+    console.log(carta); //carta debe ser de la baraja
+
+    return '2C';
+}
+pedirCarta();
