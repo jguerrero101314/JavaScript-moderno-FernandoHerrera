@@ -8,6 +8,12 @@ let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
 const esepciales = ['A', 'J', 'Q', 'K'];
 
+let puntosJugador = 0,
+    puntosComputadora = 0;
+
+//referencias del html
+const btnPedir = document.querySelector('#btnPedir');
+const puntosHTML = document.querySelectorAll('small');
 //esta funcion crea una nueva baraja
 const crearDeck = () => {
     for (let i = 2; i <= 10; i++) {
@@ -22,7 +28,6 @@ const crearDeck = () => {
     }
     // console.log(deck);
     deck = _.shuffle(deck);
-    console.log(deck);
     return deck;
 }
 crearDeck();
@@ -33,8 +38,7 @@ const pedirCarta = () => {
         throw 'No hay cartas en el deck';
     }
     const carta = deck.pop();
-    console.log(deck);
-    console.log(carta); //carta debe ser de la baraja
+
 
     return carta;
 }
@@ -48,4 +52,11 @@ const valorCarta = (carta) => {
         valor * 1;
 }
 const valor = valorCarta(pedirCarta());
-console.log({ valor });
+
+
+btnPedir.addEventListener('click', () => {
+    const carta = pedirCarta();
+    puntosJugador = puntosJugador + valorCarta(carta);
+    puntosHTML[0].innerHTML = puntosJugador;
+
+});
