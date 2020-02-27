@@ -31,8 +31,7 @@ class Persona {
         console.log(`${this.codigo} dice: ${this.frase}`);
     }
 }
-const spiderman = new Persona('Peter Parker', 'Spider', 'Soy tu amigable vecino Spiderman');
-const ironman = new Persona('Tony Stark', 'Iron man', 'yo soy iron man');
+
 console.log(spiderman);
 console.log(ironman);
 spiderman.quienSoy();
