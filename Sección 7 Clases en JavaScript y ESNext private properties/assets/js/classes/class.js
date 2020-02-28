@@ -115,7 +115,7 @@ spiderman.nemesis = 'Duende verde';
 
 
 console.log(spiderman.getComidaFavorita);
-// Persona._conteo = 2;
+Persona._conteo = 2;
 console.log('conteo estatico', Persona._conteo);
 console.log(Persona.conteo);
 Persona.mensaje();
