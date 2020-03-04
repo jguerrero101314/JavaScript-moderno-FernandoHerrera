@@ -1,0 +1,18 @@
+{
+    "name": "webpack-inicial",
+    "version": "1.0.0",
+    "description": "Este es un cascaron de un proyecto de webpack",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack"
+    },
+    "author": "Joel Guerrero",
+    "license": "ISC",
+    "devDependencies": {
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "webpack": "^4.41.6",
+        "webpack-cli": "^3.3.11"
+    }
+}
