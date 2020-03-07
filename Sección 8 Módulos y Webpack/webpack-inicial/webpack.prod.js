@@ -3,9 +3,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     optimization: {
         minimizer: [new OptimizeCssAssetsPlugin()]
+    },
+    output: {
+        filename: 'main.[contentHash].js',
+
     },
     module: {
         rules: [{
@@ -48,7 +52,7 @@ module.exports = {
             filename: './index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: 'main.[contentHash].css',
             ignoreOrder: false
         })
     ]
