@@ -29,6 +29,16 @@ module.exports = {
                     loader: 'html-loader',
                     options: { minimize: false }
                 }]
+            },
+            {
+                test: /\.(png|svg|jpg|gif|jpeg)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        esModule: false,
+                        name: 'assets/[name].[ext]'
+                    }
+                }]
             }
         ]
     },
