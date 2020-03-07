@@ -1,17 +1,26 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     module: {
         rules: [{
-            test: /\.html$/,
-            use: [{
-                loader: 'html-loader',
-                options: {
-                    minimize: true
-                }
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
 
-            }]
-        }]
+            {
+                test: /\.html$/,
+                use: [{
+                    loader: 'html-loader',
+                    options: {
+                        minimize: true
+                    }
+
+                }]
+            }
+        ]
     },
     plugins: [
         new HtmlWebPackPlugin({
