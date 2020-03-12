@@ -10,6 +10,16 @@ export class TodoList {
     }
     marcarCompletado(id) {
 
+        for (const todo of this.todos) {
+            id = parseInt(id);
+            // console.log(id, todo.id);
+            if (todo.id === parseInt(id)) {
+                todo.completado = !todo.completado;
+                break;
+
+            }
+        }
+
     }
     eliminarCompletados() {
 
