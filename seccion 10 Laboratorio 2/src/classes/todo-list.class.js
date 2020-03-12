@@ -6,6 +6,10 @@ export class TodoList {
         this.todos.push(todo);
     }
     eliminarTodo(id) {
+        id = parseInt(id);
+        this.todos = this.todos.filter(todo => todo.id !== id);
+
+
 
     }
     marcarCompletado(id) {
