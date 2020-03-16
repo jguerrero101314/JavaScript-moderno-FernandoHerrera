@@ -14,4 +14,8 @@ import { ObtenerHeroesArr } from './js/await';
 //     .catch(console.warn);
 // buscarHeroeAsync('iron2').then(console.log).catch(console.warn);
 
-ObtenerHeroesArr().then(console.table);
+console.time('await')
+ObtenerHeroesArr().then(heroes => {
+    console.table(heroes);
+    console.timeEnd('await')
+});
