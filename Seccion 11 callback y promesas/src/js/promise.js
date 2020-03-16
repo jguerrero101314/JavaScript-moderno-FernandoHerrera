@@ -32,7 +32,6 @@ export const buscarHeroeAsync = async id => {
     } else {
         throw `No existe un heroe con el id ${id}`; // tradicional
         //throw Error(`No existe un heroe con el id ${id}`);
-
     }
 
 };
