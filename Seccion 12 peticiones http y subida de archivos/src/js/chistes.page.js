@@ -34,6 +34,10 @@ const dibujarChiste = (chiste) => {
     olItem.innerHTML = `<b>${chiste.id}</b>:${chiste.value}`;
     olItem.classList.add('list-group-item');
     olList.append(olItem);
+    const img = document.createElement('img');
+    img.setAttribute('src', `${chiste.icon_url}`);
+
+
 }
 export const init = () => {
     crearChisteHtml();
