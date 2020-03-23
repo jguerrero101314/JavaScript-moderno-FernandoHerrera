@@ -1,3 +1,4 @@
+import { subirImagen } from './http-provider';
 const body = document.body;
 let inputFile, imgFoto;
 
@@ -19,7 +20,7 @@ const crearInputHtml = () => {
 const eventos = () => {
     inputFile.addEventListener('change', (event) => {
         const file = event.target.files[0];
-        console.log(file);
+        subirImagen(file).then(url => imgFoto.src = url);
     });
 }
 
